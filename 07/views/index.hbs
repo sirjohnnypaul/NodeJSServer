@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+<p>Welcome To {{ title }}</p>
+{{# if condition }}
+Condition match
+{{ else }}
+Condition does not match
+{{/if}}
+
+{{# each myTable as |val key|}}
+  {{key}}: {{val}},
+{{/each}}

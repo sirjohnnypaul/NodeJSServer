@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    ul
+      li My Text
+    - var condition = true
+
+    if condition
+      p Pada
+
+    - var myTable = [1,2,3]
+    each value in myTable
+      p= value
+
+    input(type='text').myClass#myId
+
+    block content

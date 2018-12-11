@@ -1,0 +1,42 @@
+<h1>{{ title }}</h1>
+<p>Welcome To {{ title }}</p>
+{{#if success}} 
+<section>
+    <h2>Validation Succed!</h2>
+</section>
+{{else}}
+    {{#if errors}}
+    <section>
+        <ul>
+            {{#each errors}}
+                <li>{{this.msg}}</li>
+            {{/each}}
+        </ul>
+    </section>
+    {{/if}}
+<h2>Pass your Id to be redirected to individual page</h2>
+
+<form action="/submit" method="post">
+
+<div class="input">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email">
+</div>
+</br>
+</br>
+<div class="input">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+</div>
+</br>
+</br>
+<div class="input">
+    <label for="confirmpassword">Confirm Password</label>
+    <input type="password" id="confirmpassword" name="confirmpassword">
+</div>
+</br>
+</br>
+<button type="submit">Confirm</button>
+
+</form>
+{{/if}}
